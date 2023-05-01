@@ -19,6 +19,16 @@ public class JavaTypeConverter {
     }
 
     /**
+     * T[] Array 타입을 리스트로 변환해주는 함수
+     * @author lgm1007
+     * @param array
+     * @return List<T>
+     */
+    public static <T> List<T> convertArrayToList(T[] array) {
+        return Arrays.asList(array);
+    }
+
+    /**
      * List<Integer> 안에 있는 Integer 요소들을 int 타입으로 변환해주는 함수
      * @author lgm1007
      * @param list

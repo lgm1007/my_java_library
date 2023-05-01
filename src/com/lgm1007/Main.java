@@ -21,6 +21,13 @@ public class Main {
             System.out.println(array);
         }
 
+        public void convertArrayToListTest() {
+            String[] array = {"apple", "banana", "carrot"};
+            List<String> list = converter.convertArrayToList(array);
+
+            System.out.println(list);
+        }
+
         public void convertListToIntegerTest() {
             List<Integer> list = List.of(7, 5, 3, 2, 1);
             int i = converter.convertListToInteger(list);
