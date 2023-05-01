@@ -29,6 +29,25 @@ public class JavaTypeConverter {
     }
 
     /**
+     * 문자열을 T타입으로 변환해주는 함수
+     * @author lgm1007
+     * @param str
+     * @param clazz
+     * @return T
+     */
+    public static <T> T parseTo(String str, Class<T> clazz) {
+        if (clazz == Integer.class) {
+            return (T) Integer.valueOf(str);
+        } else if (clazz == Double.class) {
+            return (T) Double.valueOf(str);
+        } else if (clazz == Boolean.class) {
+            return (T) Boolean.valueOf(str);
+        } else {
+            throw new IllegalArgumentException("Unsupported class : " + clazz.getName());
+        }
+    }
+
+    /**
      * List<Integer> 안에 있는 Integer 요소들을 int 타입으로 변환해주는 함수
      * @author lgm1007
      * @param list

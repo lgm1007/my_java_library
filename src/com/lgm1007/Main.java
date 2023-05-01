@@ -28,6 +28,13 @@ public class Main {
             System.out.println(list);
         }
 
+        public void convertParseToTest() {
+            String str = "1.05";
+            Double d = converter.parseTo(str, Double.class);
+
+            System.out.println(d);
+        }
+
         public void convertListToIntegerTest() {
             List<Integer> list = List.of(7, 5, 3, 2, 1);
             int i = converter.convertListToInteger(list);
