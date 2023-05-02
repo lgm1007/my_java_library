@@ -48,6 +48,21 @@ public class JavaTypeConverter {
     }
 
     /**
+     * 스택의 순서를 뒤바꿔주는 함수
+     * @author lgm1007
+     * @param stack
+     * @return Stack<T>
+     * @param <T>
+     */
+    public static <T> Stack<T> reverseStack(Stack<T> stack) {
+        Stack<T> reverseStack = new Stack<>();
+        while (!stack.isEmpty()) {
+            reverseStack.push(stack.pop());
+        }
+        return reverseStack;
+    }
+
+    /**
      * List<Integer> 안에 있는 Integer 요소들을 int 타입으로 변환해주는 함수
      * @author lgm1007
      * @param list
