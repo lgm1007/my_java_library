@@ -63,6 +63,19 @@ public class JavaTypeConverter {
     }
 
     /**
+     * 큐의 순서를 뒤바꿔주는 함수
+     * @author lgm1007
+     * @param queue
+     * @return Queue<T>
+     * @param <T>
+     */
+    public static <T> Queue<T> reverseQueue(Queue<T> queue) {
+        LinkedList<T> list = new LinkedList<>(queue);
+        Collections.reverse(list);
+        return list;
+    }
+
+    /**
      * List<Integer> 안에 있는 Integer 요소들을 int 타입으로 변환해주는 함수
      * @author lgm1007
      * @param list

@@ -2,14 +2,16 @@ package com.lgm1007;
 
 import com.lgm1007.converter.JavaTypeConverter;
 
+import java.util.LinkedList;
 import java.util.List;
+import java.util.Queue;
 import java.util.Stack;
 
 public class Main {
     public static void main(String[] args) {
         ConvertTest testClass = new ConvertTest();
 
-        testClass.reverseStackTest();
+        testClass.reverseQueueTest();
     }
 
     public static class ConvertTest {
@@ -51,6 +53,19 @@ public class Main {
 
             Stack<Integer> reverseStack = converter.reverseStack(stack);
             System.out.println(reverseStack);
+        }
+
+        public void reverseQueueTest() {
+            Queue<Integer> queue = new LinkedList<>();
+            queue.add(1);
+            queue.add(2);
+            queue.add(3);
+            queue.add(4);
+            queue.add(5);
+            System.out.println(queue);
+
+            Queue<Integer> reverseQueue = converter.reverseQueue(queue);
+            System.out.println(reverseQueue);
         }
 
         public void convertListToIntegerTest() {
