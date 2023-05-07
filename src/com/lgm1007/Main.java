@@ -111,5 +111,31 @@ public class Main {
             sorter.sortListDescending(list);
             System.out.println(list);
         }
+
+        public void sortArrayAscTest() {
+            String[] array = {"cherry", "grape", "pear", "pineapple", "apple", "melon", "blueberry", "banana", "apricot"};
+            for (String s: array) {
+                System.out.print(s + " ");
+            }
+            System.out.println();
+
+            sorter.sortArrayAscending(array);
+            for (String s: array) {
+                System.out.print(s + " ");
+            }
+        }
+
+        public void sortArrayDescTest() {
+            String[] array = {"cherry", "grape", "pear", "pineapple", "apple", "melon", "blueberry", "banana", "apricot"};
+            for (String s: array) {
+                System.out.print(s + " ");
+            }
+            System.out.println();
+
+            sorter.sortArrayDescending(array);
+            for (String s: array) {
+                System.out.print(s + " ");
+            }
+        }
     }
 }
