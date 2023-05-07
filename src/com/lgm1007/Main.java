@@ -1,17 +1,16 @@
 package com.lgm1007;
 
 import com.lgm1007.converter.JavaTypeConverter;
+import com.lgm1007.sorter.JavaSorter;
 
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Queue;
-import java.util.Stack;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
-        ConvertTest testClass = new ConvertTest();
+        ConvertTest convertTest = new ConvertTest();
+        SortTest sortTest = new SortTest();
 
-        testClass.reverseQueueTest();
+        sortTest.sortListDescTest();
     }
 
     public static class ConvertTest {
@@ -73,6 +72,44 @@ public class Main {
             int i = converter.convertListToInteger(list);
 
             System.out.println(i);
+        }
+    }
+
+    public static class SortTest {
+        JavaSorter sorter;
+
+        public SortTest() {
+            this.sorter = new JavaSorter();
+        }
+
+        public void sortListAscTest() {
+            List<Integer> list = new ArrayList<>();
+            list.add(4);
+            list.add(5);
+            list.add(3);
+            list.add(2);
+            list.add(2);
+            list.add(8);
+            list.add(6);
+            System.out.println(list);
+
+            sorter.sortListAscending(list);
+            System.out.println(list);
+        }
+
+        public void sortListDescTest() {
+            List<Integer> list = new ArrayList<>();
+            list.add(4);
+            list.add(5);
+            list.add(3);
+            list.add(2);
+            list.add(2);
+            list.add(8);
+            list.add(6);
+            System.out.println(list);
+
+            sorter.sortListDescending(list);
+            System.out.println(list);
         }
     }
 }
