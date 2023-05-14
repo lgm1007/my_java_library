@@ -18,7 +18,7 @@ public class GraphTraveler {
 
         while(!stack.empty()) {
             int current = stack.pop();
-            System.out.println(current + " ");
+            System.out.print(current + " ");
 
             for(int i = 0; i < graph.length; i++) {
                 // 현재 노드와 노드 i가 인접해있고, 노드 i를 방문한 적이 없는 경우
@@ -44,7 +44,7 @@ public class GraphTraveler {
 
         while(!queue.isEmpty()) {
             int current = queue.poll();
-            System.out.println(current + " ");
+            System.out.print(current + " ");
 
             for(int i = 0; i < graph.length; i++) {
                 if(graph[current][i] == 1 && !visited[i]) {

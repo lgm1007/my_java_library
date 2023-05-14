@@ -1,6 +1,7 @@
 package com.lgm1007;
 
 import com.lgm1007.converter.JavaTypeConverter;
+import com.lgm1007.graphtraveler.GraphTraveler;
 import com.lgm1007.sorter.JavaSorter;
 
 import java.util.*;
@@ -9,8 +10,9 @@ public class Main {
     public static void main(String[] args) {
         ConvertTest convertTest = new ConvertTest();
         SortTest sortTest = new SortTest();
+        GraphTravelerTest graphTravelerTest = new GraphTravelerTest();
 
-        sortTest.sortListDescTest();
+        graphTravelerTest.bfsTest();
     }
 
     public static class ConvertTest {
@@ -136,6 +138,34 @@ public class Main {
             for (String s: array) {
                 System.out.print(s + " ");
             }
+        }
+    }
+
+    public static class GraphTravelerTest {
+        GraphTraveler graphTraveler;
+
+        public GraphTravelerTest() {
+            this.graphTraveler = new GraphTraveler();
+        }
+
+        public void dfsTest() {
+            int[][] graph = {{0,1,1,0},
+                            {1,0,0,1},
+                            {1,0,0,1},
+                            {0,1,1,0}};
+
+            System.out.print("DFS: ");
+            graphTraveler.dfs(graph, 0);
+        }
+
+        public void bfsTest() {
+            int[][] graph = {{0,1,1,0},
+                            {1,0,1,1},
+                            {1,1,0,1},
+                            {0,1,1,0}};
+
+            System.out.print("BFS: ");
+            graphTraveler.bfs(graph, 0);
         }
     }
 }
