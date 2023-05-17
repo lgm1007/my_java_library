@@ -1,8 +1,8 @@
-package com.lgm1007.graphtraveler;
+package com.lgm1007.graphtraversal;
 
 import java.util.*;
 
-public class GraphTraveler {
+public class GraphTraversal {
 
     /**
      * DFS 메서드

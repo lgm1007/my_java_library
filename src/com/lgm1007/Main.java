@@ -1,7 +1,7 @@
 package com.lgm1007;
 
 import com.lgm1007.converter.JavaTypeConverter;
-import com.lgm1007.graphtraveler.GraphTraveler;
+import com.lgm1007.graphtraversal.GraphTraversal;
 import com.lgm1007.sorter.JavaSorter;
 
 import java.util.*;
@@ -142,10 +142,10 @@ public class Main {
     }
 
     public static class GraphTravelerTest {
-        GraphTraveler graphTraveler;
+        GraphTraversal graphTraversal;
 
         public GraphTravelerTest() {
-            this.graphTraveler = new GraphTraveler();
+            this.graphTraversal = new GraphTraversal();
         }
 
         public void dfsTest() {
@@ -155,7 +155,7 @@ public class Main {
                             {0,1,1,0}};
 
             System.out.print("DFS: ");
-            graphTraveler.dfs(graph, 0);
+            graphTraversal.dfs(graph, 0);
         }
 
         public void bfsTest() {
@@ -165,7 +165,7 @@ public class Main {
                             {0,1,1,0}};
 
             System.out.print("BFS: ");
-            graphTraveler.bfs(graph, 0);
+            graphTraversal.bfs(graph, 0);
         }
     }
 }
